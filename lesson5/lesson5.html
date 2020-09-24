@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson5 –&gt; Lets Enable Envoy Proxy for microapp1 &#8212; Terminating Gateway 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson6 –&gt; Lets Enable Envoy Proxy for microapp1" href="../lesson6/lesson6.html" />
+    <link rel="prev" title="Lesson4 – &gt; Lets check the Services on Consul" href="../lesson4/lesson4.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="lesson5-lets-enable-envoy-proxy-for-microapp1">
+<h1>Lesson5 –&gt; Lets Enable Envoy Proxy for microapp1<a class="headerlink" href="#lesson5-lets-enable-envoy-proxy-for-microapp1" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Now we need to enable Envoy Side car proxy for microapp1</p></li>
+<li><p>Open another ubuntu WEB Shell from UDF by doing Components–&gt;ubuntu–&gt;Access–&gt;web Shell</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/webshell.png" src="../_images/webshell.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>At the prompt enter <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">login</span> <span class="pre">udf</span> <span class="pre">`</span></code> &amp; Password <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">udf</span> <span class="pre">`</span></code></p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/less1-4.png" src="../_images/less1-4.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>After logging in udf change directory <code class="docutils literal notranslate"><span class="pre">`cd</span> <span class="pre">consul-tg-env/tffiles`</span></code></p></li>
+<li><p>Goto AWS Console –&gt; Services —&gt; EC2 –&gt; scs-term-gw-demo-client –&gt; Actions –&gt; Connect —&gt; ssh client</p></li>
+<li><p>Copy the example as shown and go back to the ubuntu Webshell and paste it as shown</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/awsmicro1.png" src="../_images/awsmicro1.png" />
+<img alt="../_images/awsmicro2.png" src="../_images/awsmicro2.png" />
+<img alt="../_images/ubuntussh.png" src="../_images/ubuntussh.png" />
+</div></blockquote>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Terminating Gateway</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lesson1 –&gt; Access UDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson10/lesson10.html">Lesson10 –&gt; Test microapp1 to app1 communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lesson2 –&gt; Setup AWS Access Key &amp; Secret Key</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lesson3 –&gt; Run Make File to create Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lesson4 – &gt; Lets check the Services on Consul</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson5 –&gt; Lets Enable Envoy Proxy for microapp1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lesson6 –&gt; Lets Enable Envoy Proxy for microapp1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson7/lesson7.html">Lesson7 –&gt; Check status of Envoy Proxy for microapp1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson8/lesson8.html">Lesson8 –&gt; Install As3 RPM on BIG-IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson9/lesson9.html">Lesson9 –&gt; Run the Watcher Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson10/lesson10.html">Lesson10 –&gt; Test microapp1 to app1 communication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../lesson4/lesson4.html" title="previous chapter">Lesson4 – &gt; Lets check the Services on Consul</a></li>
+      <li>Next: <a href="../lesson6/lesson6.html" title="next chapter">Lesson6 –&gt; Lets Enable Envoy Proxy for microapp1</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sanjay Shitole.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/lesson5/lesson5.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

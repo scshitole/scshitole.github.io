@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson4 – &gt; Lets check the Services on Consul &#8212; Terminating Gateway 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson5 –&gt; Lets Enable Envoy Proxy for microapp1" href="../lesson5/lesson5.html" />
+    <link rel="prev" title="Lesson3 –&gt; Run Make File to create Infrastructure" href="../lesson3/lesson3.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="lesson4-lets-check-the-services-on-consul">
+<h1>Lesson4 – &gt; Lets check the Services on Consul<a class="headerlink" href="#lesson4-lets-check-the-services-on-consul" title="Permalink to this headline">¶</a></h1>
+<p>Agenda</p>
+<ol class="arabic simple">
+<li><p>Copy the Consul UI IP address from the output command</p></li>
+<li><p>Open a browser and issue <a class="reference external" href="http://Consul_ip">http://Consul_ip</a></p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/consul_ui.png" src="../_images/consul_ui.png" />
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p>You can see that we have 5 service shown in the consul UI</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">`app1_update`</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">`app2`</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">`bigip_tgw`</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">`consul`</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">`microapp1`</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Service <code class="docutils literal notranslate"><span class="pre">`microapp1`</span></code> is running in the Consul Connect Service Mesh, service <code class="docutils literal notranslate"><span class="pre">`app1_update`</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">`app2`</span></code> are  the service running behind the BIG-IP. Service <code class="docutils literal notranslate"><span class="pre">`bigip_tgw`</span></code> is the terminating gateway service registered to the Consul Connect</p></li>
+<li><p>You can check all the services by issuing <code class="docutils literal notranslate"><span class="pre">`cd</span> <span class="pre">/home/udf/consul-tg-env/service-configs`</span></code></p></li>
+<li><p>All these services were created by doing <code class="docutils literal notranslate"><span class="pre">`make</span> <span class="pre">all</span></code> in lesson3</p></li>
+<li><p>Click on each service in the Consul UI to learn more about it</p></li>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">`microapp1--&gt;Service_check--&gt;Proxy</span> <span class="pre">Info`</span></code> to see that Connect Sidecar Listening is failing</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/proxyfail.png" src="../_images/proxyfail.png" />
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can verify that the Connect Sidecar is showing Red in Proxy Health</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Terminating Gateway</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lesson1 –&gt; Access UDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson10/lesson10.html">Lesson10 –&gt; Test microapp1 to app1 communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lesson2 –&gt; Setup AWS Access Key &amp; Secret Key</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lesson3 –&gt; Run Make File to create Infrastructure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson4 – &gt; Lets check the Services on Consul</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">Lesson5 –&gt; Lets Enable Envoy Proxy for microapp1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lesson6 –&gt; Lets Enable Envoy Proxy for microapp1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson7/lesson7.html">Lesson7 –&gt; Check status of Envoy Proxy for microapp1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson8/lesson8.html">Lesson8 –&gt; Install As3 RPM on BIG-IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson9/lesson9.html">Lesson9 –&gt; Run the Watcher Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson10/lesson10.html">Lesson10 –&gt; Test microapp1 to app1 communication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../lesson3/lesson3.html" title="previous chapter">Lesson3 –&gt; Run Make File to create Infrastructure</a></li>
+      <li>Next: <a href="../lesson5/lesson5.html" title="next chapter">Lesson5 –&gt; Lets Enable Envoy Proxy for microapp1</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sanjay Shitole.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/lesson4/lesson4.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
